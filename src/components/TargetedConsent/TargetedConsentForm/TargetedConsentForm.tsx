@@ -56,7 +56,7 @@ export const TargetedConsentForm: React.FC<TTargetedConsentFormProps> = ({
             />
             <label className={styles.checkboxLabel} htmlFor="consentCheck">
               {consentName
-                ? `I agree to the terms and coditions of ${consentName}`
+                ? `I agree to the terms and conditions of ${consentName}`
                 : "I agree to the terms and conditions"}
             </label>
           </div>

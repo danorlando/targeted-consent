@@ -6,7 +6,7 @@ export const handlers = [
     return res(ctx.status(200), ctx.json(mocks.targetedConsents));
   }),
 
-  rest.get("*/user/consents/SignUserConsents", (req, res, ctx) => {
+  rest.post("*/user/consents/SignUserConsents", (req, res, ctx) => {
     return res(ctx.status(200), ctx.json({ count: 0, consents: [] }));
   }),
 ];
