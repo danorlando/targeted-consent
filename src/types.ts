@@ -4,9 +4,9 @@ export type TConsents = {
 };
 
 export type TConsent = {
-  consent_id: string;
+  consentId: string;
   name: string;
-  consent_html: string;
+  consentHtml: string;
   global: boolean;
   language: string;
 };
