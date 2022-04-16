@@ -52,12 +52,14 @@ export default function PreliminaryCheck({ children }: TPreliminaryCheckProps) {
           />
         );
       })
-      .finally(() => setIsLoading(false));
+      .finally(() => {
+        setConsentsComplete(true);
+        setIsLoading(false);
+      });
   }
 
   const handleConsentsComplete = (signedConsents: TConsent[]) => {
     if (!consentsComplete) {
-      setConsentsComplete(true);
       signConsents(signedConsents);
     }
   };
@@ -69,7 +71,7 @@ export default function PreliminaryCheck({ children }: TPreliminaryCheckProps) {
       </PageContainer>
     );
   }
-
+  
   if (consentsData && consentsData.count > 0 && !consentsComplete) {
     return (
       <PageContainer>

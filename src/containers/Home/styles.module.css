@@ -1,0 +1,23 @@
+.homeWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
+.homeContainer {
+  margin: 0 20px;
+  max-width: 960px;
+  width: calc(100% - 40px);
+}
+
+.homeContainer h1 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.homeContainer p {
+  font-weight: 500;
+  font-size: 1.2em;
+  text-align: center;
+}
+

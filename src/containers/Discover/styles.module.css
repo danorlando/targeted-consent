@@ -1,0 +1,23 @@
+.discoverWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
+.discoverContainer {
+  margin: 0 20px;
+  max-width: 960px;
+  width: calc(100% - 40px);
+}
+
+.discoverContainer h1 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.discoverContainer p {
+  font-weight: 500;
+  font-size: 1.2em;
+  text-align: center;
+}
+

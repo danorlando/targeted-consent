@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TConsent } from "../../types";
 import TargetedConsentForm from "./TargetedConsentForm";
-import { PageContainer } from "../../components";
-import styles from "./styles.module.css"
+import styles from "./styles.module.css";
 
 type TTargetedConsentProps = {
   onConsentComplete: (signedConsents: TConsent[]) => void;
@@ -21,10 +20,13 @@ const TargetedConsent = (props: TTargetedConsentProps) => {
     }
     setCurrentIndex(currentIndex + 1);
     setCurrentConsent(consents[currentIndex + 1]);
+  };
+
+  useEffect(() => {
     if (signedConsents.length === consents.length) {
       onConsentComplete(signedConsents);
-    }
-  };
+    }  
+  }, [signedConsents, consents, onConsentComplete]);
 
   return (
     <>
