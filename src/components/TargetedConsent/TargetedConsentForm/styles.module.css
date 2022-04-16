@@ -1,0 +1,67 @@
+.consentHeader {
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.consentHeader h1 {
+  font-size: 1.8rem;
+}
+
+.consentHeader p {
+  font-weight: 500;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.consentContent {
+  margin: 10px 0 20px;
+}
+
+.contentWrapper {
+  padding: 15px;
+  border: solid 1px rgb(192, 191, 191);
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.targetedConsentFooter {
+  line-height: 1.2;
+  justify-content: center;
+  text-align: center;
+  min-height: 120px;
+  margin: 15px 0;
+}
+
+.consentButton {
+  flex: none;
+  height: 45px;
+  min-width: 300px;
+  color: white;
+  font-size: 18px;
+  background-color: black;
+  font-weight: 600;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.consentButton:disabled {
+  border: 1px solid rgb(161, 160, 160);
+  cursor: auto;
+  background-color: rgb(190, 190, 190);
+  color: rgb(146, 146, 146);
+}
+
+.checkboxContainer {
+  margin-bottom: 15px;
+}
+
+.checkboxLabel {
+  margin: 5px;
+  font-size: 17px;
+  font-weight: 700;
+}
