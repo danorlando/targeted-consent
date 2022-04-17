@@ -10,14 +10,14 @@ type TTargetedConsentProps = {
 
 const TargetedConsent = (props: TTargetedConsentProps) => {
   const { onConsentComplete, consents } = props;
-  const [currentConsent, setCurrentConsent] = useState<TConsent>(consents[0]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [currentConsent, setCurrentConsent] = useState<TConsent>(
+    consents[currentIndex]
+  );
   const [signedConsents, setSignedConsents] = useState<TConsent[]>([]);
 
   const handleContinue = () => {
-    if (signedConsents.indexOf(consents[currentIndex]) === -1) {
-      setSignedConsents([...signedConsents, currentConsent]);
-    }
+    setSignedConsents([...signedConsents, currentConsent]);
     setCurrentIndex(currentIndex + 1);
     setCurrentConsent(consents[currentIndex + 1]);
   };
@@ -25,7 +25,7 @@ const TargetedConsent = (props: TTargetedConsentProps) => {
   useEffect(() => {
     if (signedConsents.length === consents.length) {
       onConsentComplete(signedConsents);
-    }  
+    }
   }, [signedConsents, consents, onConsentComplete]);
 
   return (
@@ -35,7 +35,7 @@ const TargetedConsent = (props: TTargetedConsentProps) => {
           <div className={styles.consentContainer}>
             <TargetedConsentForm
               consentName={currentConsent.name}
-              consentText={currentConsent.consentHtml}
+              consentHtml={currentConsent.consentHtml}
               onContinue={handleContinue}
             />
           </div>

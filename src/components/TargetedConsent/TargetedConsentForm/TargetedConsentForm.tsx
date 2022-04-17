@@ -3,13 +3,13 @@ import styles from "./styles.module.css";
 
 type TTargetedConsentFormProps = {
   consentName: string;
-  consentText: string;
+  consentHtml: string;
   onContinue: () => void;
 };
 
 export const TargetedConsentForm: React.FC<TTargetedConsentFormProps> = ({
   consentName,
-  consentText,
+  consentHtml,
   onContinue,
 }) => {
   const [isTermsAccepted, setIsTermsAccepted] = useState<boolean>(false);
@@ -40,7 +40,7 @@ export const TargetedConsentForm: React.FC<TTargetedConsentFormProps> = ({
           data-testid="consentContent"
           className={styles.consentContent}
           dangerouslySetInnerHTML={{
-            __html: consentText,
+            __html: consentHtml,
           }}
         />
       </div>
